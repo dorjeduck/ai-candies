@@ -1,10 +1,8 @@
 ---
 layout: page
-title: About Me
+title: Hello visual world
 permalink: /about/
 ---
-
-# Hello visual world
 
 > I study my mind and therefore all appearances are my texts. 
 >
