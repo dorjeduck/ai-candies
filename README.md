@@ -6,7 +6,7 @@
 
 https://dorjeduck.github.io/ai-candies/
 
-# My Blog
+# AI Candies
 
 
 _powered by [fastpages](https://github.com/fastai/fastpages)_
