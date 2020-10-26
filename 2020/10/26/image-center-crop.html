@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Central cropping | ai candies</title>
+<title>Image cropping | ai candies</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Central cropping" />
+<meta property="og:title" content="Image cropping" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="image processing and generation with tensorflow" />
 <meta property="og:description" content="image processing and generation with tensorflow" />
@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-10-26T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://dorjeduck.github.io/ai-candies/2020/10/26/image-center-crop.html","@type":"BlogPosting","headline":"Central cropping","dateModified":"2020-10-26T00:00:00-05:00","datePublished":"2020-10-26T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dorjeduck.github.io/ai-candies/2020/10/26/image-center-crop.html"},"description":"image processing and generation with tensorflow","@context":"https://schema.org"}</script>
+{"url":"https://dorjeduck.github.io/ai-candies/2020/10/26/image-center-crop.html","@type":"BlogPosting","headline":"Image cropping","dateModified":"2020-10-26T00:00:00-05:00","datePublished":"2020-10-26T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dorjeduck.github.io/ai-candies/2020/10/26/image-center-crop.html"},"description":"image processing and generation with tensorflow","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/ai-candies/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dorjeduck.github.io/ai-candies/feed.xml" title="ai candies" /><link rel="shortcut icon" type="image/x-icon" href="/ai-candies/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,7 +71,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Central cropping</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-10-26T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Image cropping</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-10-26T00:00:00-05:00" itemprop="datePublished">
         Oct 26, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -164,10 +164,11 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preprocessing-image">Preprocessing image<a class="anchor-link" href="#Preprocessing-image"> </a></h2><ol>
-<li><p>Loading two image files into PIL format: <a href="https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/load_img">https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/load_img</a></p>
+<h2 id="Preprocessing-the-images">Preprocessing the images<a class="anchor-link" href="#Preprocessing-the-images"> </a></h2><ol>
+<li><p>Loading the two image files into PIL format:<br />
+<a href="https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/load_img">https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/load_img</a></p>
 </li>
-<li><p>Converting the PIL Imagse instance to Numpy arrays:
+<li><p>Converting the PIL image instancea to Numpy arrays:<br />
 <a href="https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/img_to_array">https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/img_to_array</a></p>
 </li>
 </ol>
@@ -224,7 +225,7 @@ height/width of boot_ganga_2.jpg : 800/1200
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Original-Images">Original Images<a class="anchor-link" href="#Original-Images"> </a></h2>
+<h2 id="The-original-images">The original images<a class="anchor-link" href="#The-original-images"> </a></h2>
 </div>
 </div>
 </div>
@@ -1776,7 +1777,7 @@ z
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Cropping-the-images">Cropping the images<a class="anchor-link" href="#Cropping-the-images"> </a></h2><p>1) Creating a CenterCrop layer for given target height &amp; width with Kears 
 <a href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/experimental/preprocessing/CenterCrop">https://www.tensorflow.org/api_docs/python/tf/keras/layers/experimental/preprocessing/CenterCrop</a></p>
-<p>2) Cropping the image</p>
+<p>2) Cropping the images</p>
 
 </div>
 </div>
