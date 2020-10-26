@@ -197,8 +197,6 @@ window.onload = wrap_img;
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;height/width of </span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">image_path</span><span class="p">),</span><span class="n">image_np_array</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">image_np_array</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 
 <span class="n">image_np_array_batch</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">image_np_arries</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">image_np_array_batch</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1794,10 +1792,24 @@ z
 
 <span class="n">image_cropped_np_array_batch</span> <span class="o">=</span> <span class="n">center_crop_layer</span><span class="p">(</span><span class="n">image_np_array_batch</span><span class="p">)</span> <span class="c1">#(2)</span>
 
-<span class="c1">#print(&quot;Keras CenterCrop Layer output shape (Numpy Array): {}&quot;.format(image_cropped_np_array_batch.shape))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Keras CenterCrop Layer output shape (Numpy Array): </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">image_cropped_np_array_batch</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Keras CenterCrop Layer output shape (Numpy Array): (2, 200, 800, 3)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
