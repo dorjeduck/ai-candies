@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -136,7 +136,7 @@ window.onload = wrap_img;
 <li>memory inefficent</li>
 </ul>
 <p>Enjoy</p>
-<p><em>Of course Tensorflow is awesome - we just wouldn't use such a powerful library to achieve onlye this relative simple task. Nevertheless, later on, we might want to resize images in complex models.</em></p>
+<p><em>Of course Tensorflow is awesome - we just wouldn't use such a powerful library to achieve only this relative simple task. Nevertheless, later on, we might want to resize images in complex models.</em></p>
 
 </div>
 </div>
@@ -154,7 +154,7 @@ window.onload = wrap_img;
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">display</span>
 
-<span class="n">image_path</span> <span class="o">=</span> <span class="s1">&#39;./images/ganga_boot.jpg&#39;</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="s1">&#39;../images/fujiyama.png&#39;</span>
 </pre></div>
 
     </div>
@@ -207,9 +207,32 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Image numpy array shape: (3648, 5472, 3)
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-9-3cb74462af40&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>image_pil <span class="ansi-blue-fg">=</span> tf<span class="ansi-blue-fg">.</span>keras<span class="ansi-blue-fg">.</span>preprocessing<span class="ansi-blue-fg">.</span>image<span class="ansi-blue-fg">.</span>load_img<span class="ansi-blue-fg">(</span>image_path<span class="ansi-blue-fg">)</span> <span class="ansi-red-fg">#(1)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      3</span> image_np_array <span class="ansi-blue-fg">=</span> tf<span class="ansi-blue-fg">.</span>keras<span class="ansi-blue-fg">.</span>preprocessing<span class="ansi-blue-fg">.</span>image<span class="ansi-blue-fg">.</span>img_to_array<span class="ansi-blue-fg">(</span>image_pil<span class="ansi-blue-fg">)</span> <span class="ansi-red-fg">#(2)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Image numpy array shape: {}&#34;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>image_np_array<span class="ansi-blue-fg">.</span>shape<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> 
+
+<span class="ansi-green-fg">~/anaconda3/envs/tfac/lib/python3.8/site-packages/keras_preprocessing/image/utils.py</span> in <span class="ansi-cyan-fg">load_img</span><span class="ansi-blue-fg">(path, grayscale, color_mode, target_size, interpolation)</span>
+<span class="ansi-green-intense-fg ansi-bold">    108</span>         raise ImportError(&#39;Could not import PIL.Image. &#39;
+<span class="ansi-green-intense-fg ansi-bold">    109</span>                           &#39;The use of `load_img` requires PIL.&#39;)
+<span class="ansi-green-fg">--&gt; 110</span><span class="ansi-red-fg">     </span>img <span class="ansi-blue-fg">=</span> pil_image<span class="ansi-blue-fg">.</span>open<span class="ansi-blue-fg">(</span>path<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    111</span>     <span class="ansi-green-fg">if</span> color_mode <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#39;grayscale&#39;</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    112</span>         <span class="ansi-green-fg">if</span> img<span class="ansi-blue-fg">.</span>mode <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;L&#39;</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/tfac/lib/python3.8/site-packages/PIL/Image.py</span> in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(fp, mode, formats)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2889</span> 
+<span class="ansi-green-intense-fg ansi-bold">   2890</span>     <span class="ansi-green-fg">if</span> filename<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 2891</span><span class="ansi-red-fg">         </span>fp <span class="ansi-blue-fg">=</span> builtins<span class="ansi-blue-fg">.</span>open<span class="ansi-blue-fg">(</span>filename<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;rb&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2892</span>         exclusive_fp <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">True</span>
+<span class="ansi-green-intense-fg ansi-bold">   2893</span> 
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../images/fujiyama.jpg&#39;</pre>
 </div>
 </div>
 
